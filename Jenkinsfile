@@ -1,5 +1,5 @@
 pipeline{
-  agent { node { label 'Winslave' 
+  agent ("Winslave") 
   
   stages{
     stage('code checkout'){
@@ -14,5 +14,4 @@ pipeline{
     }
   }
 }
-}
-}
+
