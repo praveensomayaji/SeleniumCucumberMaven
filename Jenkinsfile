@@ -18,10 +18,12 @@ pipeline{
     }
    }
    stage('Publish'){
+    steps{
     post {
      success {
       echo 'One way or another, I have finished'
      }
+    }
     }
    }
   }
