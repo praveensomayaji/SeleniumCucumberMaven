@@ -17,15 +17,6 @@ pipeline{
      bat 'mvn clean install -Dcucumber.options="--tags @first"'
     }
    }
-   stage('Publish'){
-    steps{
-    post {
-     success {
-      echo 'One way or another, I have finished'
-     }
-    }
-    }
-   }
   }
 }
 
