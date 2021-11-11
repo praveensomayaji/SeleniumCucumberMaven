@@ -12,6 +12,11 @@ pipeline{
         bat 'mvn compile'
       }
     }
+   stage('Execute'){
+    steps{
+     bat 'mvn clean install -Dcucumber.options="--tags @first"'
+    }
+   }
   }
 }
 
