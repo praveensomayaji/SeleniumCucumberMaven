@@ -16,13 +16,13 @@ pipeline{
     steps{
      bat 'mvn clean install -Dcucumber.options="--tags @first"'
     }
-   post{
-    success{
-     reportTitle: 'HTML report',
-     fileIncludePattern: '**/htmlreports/*.html'
-    }
+   }
+   post {
+        success {
+            echo 'One way or another, I have finished'
+        }
    }
   }
 }
-}
+
 
