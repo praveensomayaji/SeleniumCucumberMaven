@@ -21,6 +21,7 @@ public class FirstTest {
 		System.setProperty("webdriver.chrome.driver",
 				"D:/DevOps_Practice/selenium/chromedriver_win32/chromedriver.exe");
 		driver = new ChromeDriver();
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://automationpractice.com/index.php");
