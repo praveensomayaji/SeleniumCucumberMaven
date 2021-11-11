@@ -21,7 +21,7 @@ pipeline{
     steps{
      cucumber buildStatus: 'UNSTABLE',
                 reportTitle: 'HTML report',
-                fileIncludePattern: '**/*.html'
+                fileIncludePattern: '**/htmlreports/*.html'
     }
    }
   }
