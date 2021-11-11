@@ -14,7 +14,7 @@ pipeline{
     }
    stage('Execute'){
     steps{
-     bat 'mvn clean install -Dcucumber.options="--tags @first"'
+     bat 'mvn clean install -Dcucumber.options="--tags @login"'
     }
    }
   }
