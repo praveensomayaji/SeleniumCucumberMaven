@@ -19,9 +19,15 @@ pipeline{
    }
    post{
     success{
-     cucumber buildStatus: 'UNSTABLE',
-                reportTitle: 'HTML report',
-                fileIncludePattern: '**/htmlreports/*.html'
+     // publish html
+          publishHTML target: [
+              allowMissing: false,
+              alwaysLinkToLastBuild: false,
+              keepAll: true,
+              reportDir: 'coverage',
+              reportFiles: 'report.html',
+              reportName: 'HTML Report'
+            ]
     }
    }
   }
