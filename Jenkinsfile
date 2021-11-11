@@ -17,8 +17,8 @@ pipeline{
      bat 'mvn clean install -Dcucumber.options="--tags @first"'
     }
    }
-   stage('Publish Report'){
-    steps{
+   post{
+    success{
      cucumber buildStatus: 'UNSTABLE',
                 reportTitle: 'HTML report',
                 fileIncludePattern: '**/htmlreports/*.html'
