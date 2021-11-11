@@ -18,15 +18,8 @@ pipeline{
     }
    post{
     success{
-     // publish html
-          publishHTML target: [
-              allowMissing: false,
-              alwaysLinkToLastBuild: false,
-              keepAll: true,
-              reportDir: 'coverage',
-              reportFiles: 'report.html',
-              reportName: 'HTML Report'
-            ]
+     reportTitle: 'HTML report',
+     fileIncludePattern: '**/htmlreports/*.html'
     }
    }
   }
