@@ -17,10 +17,12 @@ pipeline{
      bat 'mvn clean install -Dcucumber.options="--tags @first"'
     }
    }
-   post {
-        success {
-            echo 'One way or another, I have finished'
-        }
+   stage('Publish'){
+    post {
+     success {
+      echo 'One way or another, I have finished'
+     }
+    }
    }
   }
 }
