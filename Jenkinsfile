@@ -1,5 +1,5 @@
 pipeline{
-  agent ("Winslave") 
+  agent {"Winslave"}
   
   stages{
     stage('code checkout'){
