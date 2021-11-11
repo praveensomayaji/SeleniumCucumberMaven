@@ -16,7 +16,6 @@ pipeline{
     steps{
      bat 'mvn clean install -Dcucumber.options="--tags @first"'
     }
-   }
    post{
     success{
      // publish html
@@ -31,5 +30,6 @@ pipeline{
     }
    }
   }
+}
 }
 
